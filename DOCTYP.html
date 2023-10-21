@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+  
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+h2 {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+li button {
+  margin-left: 2px; 
+}
+
+li.completed {
+  color: #888;
+  text-decoration: line-through;
+}
+.tasks input, .tasks button {
+  margin-top: 5px;
+}
+.task-buttons button {
+  margin-left: 5px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+  </style>
+  <div class="container">
+    <h1>Student Planner</h1>
+    <div class="schedule">
+      <h2>Schedule</h2>
+      <ul id="scheduleList"></ul>
+      <input type="text" id="newSchedule" placeholder="Enter new schedule">
+      <button id="addScheduleBtn">Add Schedule</button>
+    </div>
+    <div class="tasks">
+      <h2>Tasks</h2>
+      <ul id="taskList"></ul>
+      <input type="text" id="newTask" placeholder="Enter a new task">
+      <button id="addTaskBtn">Add Task</button>
+    </div>
+    <a href="home.html">home</a>
+  </div>
+  <script>
+ document.addEventListener('DOMContentLoaded', function () {
+  const scheduleList = document.getElementById('scheduleList');
+  const taskList = document.getElementById('taskList');
+  const newTaskInput = document.getElementById('newTask');
+  const addTaskBtn = document.getElementById('addTaskBtn');
+  const newScheduleInput = document.getElementById('newSchedule');
+  const addScheduleBtn = document.getElementById('addScheduleBtn');
+
+  addTaskBtn.addEventListener('click', function () {
+    const taskText = newTaskInput.value.trim();
+    if (taskText !== '') {
+      addTaskToList(taskText);
+      newTaskInput.value = '';
+    }
+  });
+
+  addScheduleBtn.addEventListener('click', function () {
+    const scheduleText = newScheduleInput.value.trim();
+    if (scheduleText !== '') {
+      addScheduleToList(scheduleText);
+      newScheduleInput.value = '';
+    }
+  });
+
+  function addScheduleToList(scheduleText) {
+    const scheduleItem = document.createElement('li');
+    scheduleItem.textContent = scheduleText;
+
+    scheduleList.appendChild(scheduleItem);
+  };
+
+  function addTaskToList(taskText) {
+    const taskItem = document.createElement('li');
+    const taskTextElement = document.createElement('span');
+    taskTextElement.textContent = taskText;
+
+    const editButton = document.createElement('button');
+    editButton.textContent = 'Edit';
+    editButton.addEventListener('click', function () {
+      editTask(taskTextElement);
+    });
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.addEventListener('click', function () {
+      deleteTask(taskItem);
+    });
+
+    const doneCheckbox = document.createElement('input');
+    doneCheckbox.type = 'checkbox';
+    doneCheckbox.addEventListener('change', function () {
+      markTaskAsDone(taskTextElement, doneCheckbox.checked);
+    });
+
+    taskItem.appendChild(doneCheckbox);
+    taskItem.appendChild(taskTextElement);
+    taskItem.appendChild(editButton);
+    taskItem.appendChild(deleteButton);
+    taskList.appendChild(taskItem);
+
+    // Schedule a reminder for the new task
+    scheduleReminder(taskText);
+  }
+
+  function editTask(taskTextElement) {
+    const newText = prompt('Edit task:', taskTextElement.textContent);
+    if (newText !== null) {
+      taskTextElement.textContent = newText;
+      // Update the reminder for the edited task
+      scheduleReminder(newText);
+    }
+  }
+
+  function deleteTask(taskItem) {
+    const confirmDelete = confirm('Are you sure you want to delete this task?');
+    if (confirmDelete) {
+      taskList.removeChild(taskItem);
+    }
+  }
+
+  function markTaskAsDone(taskTextElement, isDone) {
+    if (isDone) {
+      taskTextElement.classList.add('completed');
+    } else {
+      taskTextElement.classList.remove('completed');
+    }
+  }
+
+  function scheduleReminder(taskText) {
+    // Schedule a notification for the task with a 10-second delay (for demo purposes)
+    setTimeout(() => {
+      if (Notification.permission === 'granted') {
+        new Notification('Reminder', { body: taskText });
+      } else if (Notification.permission !== 'denied') {
+        Notification.requestPermission().then(permission => {
+          if (permission === 'granted') {
+            new Notification('Reminder', { body: taskText });
+          }
+        });
+      }
+    }, 10000); // 10 seconds (adjust as needed)
+  }
+
+  // Sample initial data for the schedule
+  // const scheduleData = ['Math Class', 'History Lecture', 'Lunch Break'];
+
+  // Display the initial schedule data
+  for (const item of scheduleData) {
+    const scheduleItem = document.createElement('li');
+    scheduleItem.textContent = item;
+    scheduleList.appendChild(scheduleItem);
+  }
+
+  // Load tasks from localStorage if available
+  const savedTasks = JSON.parse(localStorage.getItem('tasks'));
+  if (savedTasks) {
+    for (const task of savedTasks) {
+      addTaskToList(task);
+    }
+  }
+
+  // Save tasks to localStorage when the page is unloaded
+  window.addEventListener('beforeunload', function () {
+    const tasks = Array.from(document.querySelectorAll('#taskList span')).map(item => item.textContent);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  });
+});
+  </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+  
+#body {
+  display: flex;
+  height: 100vh;
+}
+
+#body-1, #body-2{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#body-2 {
+    max-width: 350px;
+    max-height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px;
+    padding-top: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px cornflowerblue;
+}
+  
+  h1 {
+   
+    text-align: center;
+    margin: 0 auto;
+    margin-top: -50px;
+    padding: 50px;
+    color:cornflowerblue;
+  }
+  
+ div h2 {
+    text-align:center;
+    color: cornflowerblue;
+    margin-bottom: 50px;
+  }
+
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    border-color: cornflowerblue;
+  }
+  
+button {
+    width: 50%;
+    padding: 10px;
+    margin: 5px;
+    background-color: cornflowerblue;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+   
+}
+button a{
+  color: white;
+  text-decoration: none;
+}
+
+button a:hover{
+  background-color: white;
+  color: cornflowerblue;
+}
+  
+button:hover {
+  background-color:white;
+  color: cornflowerblue;
+}
+  
+p {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 14px;
+}
+  
+ #body {
+  font-family: Arial, sans-serif;
+  /* background-color: cornflowerblue; */
+}
+
+.containers {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px cornflowerblue;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+#btn {
+  width: 100%;
+  padding: 10px;
+  background-color: cornflowerblue;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#btn:hover {
+  background-color: #0056b3;
+}
+
+#message {
+  color: red;
+  font-weight: bold;
+} 

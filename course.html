@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="semester.css">
+    <title>Course and semester managment</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Timetable</a></li>
+            <li><a href="#">Assignments</a></li>
+            <li><a href="grade tracker.html">Grades</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Semester Management</h1>
+
+        <div class="semester-details">
+
+            <div>
+                <input type="text" id="semester-name" placeholder="Enter semester name">
+                <button onclick="addSemester()">Add Semester</button>
+            </div>
+            <div>
+                <h2>Course over-view</h2>
+                <input type="text" id="course-name" placeholder="Enter course name">
+                <button onclick="addCourse()">Add Course</button>
+                <ul id="course-list">
+                    <!-- Courses for the selected semester will be added here -->
+                </ul>
+        
+                <div id="course-actions">
+                    <button onclick="editCourse()">Edit Course</button>
+                    <button onclick="deleteCourse()">Delete Course</button>
+                </div>
+            </div>
+            <ul id="courseList"></ul>
+        </div>
+
+        <!-- Timetable Section -->
+        <h2>Timetable</h2>
+        <form id="timetableForm">
+            <input type="text" id="classTitle" placeholder="Class Title" required>
+            <input type="text" id="classTime" placeholder="Class Time" required>
+            <button id="btn" type="submit">Add Class</button>
+        </form>
+        <ul id="timetableList"></ul>
+    </div>
+    
+    
+    <ul id="semester-list">
+        <h6>semester will be aded here</h6>
+        <!-- Semesters will be added here -->
+    </ul>
+
+    <div id="semester-details">
+        <h2>Semester Details</h2>
+        <p id="selected-semester-name">Selected Semester: None</p>
+        <button onclick="editSemester()">Edit Semester</button>
+        <button onclick="deleteSemester()">Delete Semester</button>
+    </div>
+
+   
+
+    <div id="assignment-details">
+        <h2>Assignments</h2>
+        <input type="text" id="assignment-name" placeholder="Enter assignment name">
+        <button onclick="addAssignment()">Add Assignment</button>
+        <ul id="assignment-list">
+            <!-- Assignments for the selected course will be added here -->
+        </ul>
+        <div id="assignment-actions">
+            <button onclick="editAssignment()">Edit Assignment</button>
+            <button onclick="deleteAssignment()">Delete Assignment</button>
+        </div>
+    </div>
+
+    <div id="note-details">
+        <h2>Notes</h2>
+        <textarea id="note-text" placeholder="Enter your notes"></textarea>
+        <button onclick="addNote()">Add Note</button>
+        <ul id="note-list">
+            <!-- Notes for the selected assignment will be added here -->
+        </ul>
+        <div id="note-actions">
+            <button onclick="editNote()">Edit Note</button>
+            <button onclick="deleteNote()">Delete Note</button>
+        </div>
+    </div>
+
+    <!-- <script src="grade.js"></script> -->
+    <script src="semester.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <title>Home Page</title>
+</head>
+<body>
+  <nav id="nav">
+    <ul>
+      <li><a href="DOCTYP.html" class="active">Home</a></li>
+      <li><a href="calendar.html" onclick="openCalendar()">Calendar</a></li>
+      <li><a href="#" onclick="openTasks()">Tasks</a></li>
+      <li><a href="course.html" onclick="openNotes()">Semester manager</a></li>
+      <li><a href="grade tracker.html" onclick="gradetracker()">Grade Tracker</a></li>
+      <li><a href="#" onclick="openSettings()">Settings</a></li>
+    </ul>
+  </nav>
+
+  <div>
+      <section  id="home-page">
+        <main>
+
+          <div id="content">
+
+            <div id="content-right">
+
+              <div class="calendar-container">
+                <div id="calendar"></div>
+            </div>
+
+              <h2>Dialy Routine</h2>
+              <ol>
+                <li>Morning Ritual and Prayer</li>
+                <li>Study/Coding</li>
+                <li>Class Preparation</li>
+                <li>Class/ Code and Study</li>
+                <li>Prayer</li>
+                <li>Training/Gym</li>
+                <li>Recovery/Gaming</li>
+                <li>Study/Work</li>
+                <li>liesure/ Bed time routine</li>
+              </ol>
+
+             
+            </div> 
+
+            <div id="content-middle">
+              <h2>Today's class</h2>
+              <dl>
+                <dt>CSC 213</dt>
+                <dd>JAVA</dd>
+                <dd>8am</dd>
+
+                <dt>CSC 203</dt>
+                <dd>Algorithm</dd>
+                <dd>C Implementation</dd>
+
+                <dt>CSC 232</dt>
+                <dd>Python</dd>
+
+                <dt>CSC 223</dt>
+                <dd>Software Development</dd>
+              </dl>
+
+              <section>
+                <h2>Upcoming Events</h2>
+                <ul id="events-list">
+                </ul>
+                <button onclick="addEvent()">Add Event</button>
+              </section>
+  
+              <section>
+                <h2>Notes</h2>
+                <textarea id="notes-input" rows="5" placeholder="Write down your notes here."></textarea>
+                <div>
+                  <button onclick="saveNotes()" >Save Notes</button>
+                </div>
+              </section>
+
+            </div>
+
+            <div id="content-left">
+              <div class="container">
+                <div class="schedule">
+                  <h2>TO-DO LIST</h2>
+                  <ul id="scheduleList"></ul>
+                  <input type="text" id="newSchedule" placeholder="Enter new task">
+                  <button id="addScheduleBtn">Add To-Do</button>
+                </div>
+
+                <div class="tasks">
+                  <h2>Assignments</h2>
+                  <ul id="taskList"></ul>
+                  <input type="text" id="newTask" placeholder="Enter a new assignments">
+                 <h6> <button id="addTaskBtn">Add Assignment</button></h6>
+                </div>
+                <!-- <a href="home.html">home</a> -->
+              </div>
+
+              
+            </div>
+            
+          </div>
+        </main>
+      </section> 
+          <footer>
+            <p> <a href="#">Back to top</a> &copy; 2023 Student Planner. All rights reserved. @abdulthedev&trade;</p>
+
+          </footer>
+    </div>
+    <script src="home.js"></script>
+</body>
+</html>

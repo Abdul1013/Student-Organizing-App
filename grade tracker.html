@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Result Tracker">
+    <meta name="author" content="Abdulhaq">
+    <link rel="stylesheet" href="stylegrade.css">
+    <title> Grade Tracker</title>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="#">Timetable</a></li>
+        <li><a href="#">Assignments</a></li>
+        <li><a href="grade tracker.html">Grades</a></li>
+        <li><a href="#">Notes</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="#">Profile</a></li>
+    </ul>
+  </nav>
+
+    <div id="body">
+        <!-- <h1>Student Grade Tracker</h1> -->
+
+        <div id="detial">
+            <div id="studentInfo">
+                <h2>Grade Tracker</h2>
+                <h3>Student Name: <span id="studentName"></span></h3>
+                <h3>Department: <span id="department"></span></h3>
+                <h3>Semester:  <span id="Semester"></span></h3>
+            </div>
+            <div id="img">
+              <div class="upload-container">
+                <label for="upload">Choose an image:</label>
+                <input type="file" id="upload" accept="image/*" onchange="handleFileSelect(event)">
+              </div>
+            
+              <div class="preview-container">
+                <!-- <h3>Preview:</h3> -->
+                <img id="preview" alt="Preview Image" height="100px" width="100px">
+              </div>
+            </div>
+            
+        </div>
+        
+          <div id="transcriptContainer" style="display: none;">
+            <table id="transcriptTable">
+              <tr>
+                <th>Course code</th>
+                <th>Title</th>
+                <th>Unit</th>
+                <th>Score</th>
+                <th>GP</th>
+                <th>WGP (Unit x GP)</th>
+              </tr>
+              <tr>
+                <td contenteditable="true"> <select name="Course" size="1" id="">
+                                                    <option value="" selected>MTH 111</option>
+                                                    <option value="" >SEN 101</option>
+                                                    <option value="" >CSC 112</option>
+                                                    <option value="" >GST 105</option>
+                                                    <option value="" >CSC 111</option>
+                                                    <option value="" >CSC 113</option>
+                                                    <option value="" >STT 112</option>
+                                                    <option value="" >MTH 112</option>
+                                                    <option value="" >PHY 111</option>
+                                                    <option value="" >PHY 117</option>
+                                                    </select>
+                </td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td contenteditable="true"> <select name="Course" size="1" id="">
+                    <option value="" selected>MTH 111</option>
+                    <option value="" >SEN 101</option>
+                    <option value="" >CSC 112</option>
+                    <option value="" >GST 105</option>
+                    <option value="" >CSC 111</option>
+                    <option value="" >CSC 113</option>
+                    <option value="" >STT 112</option>
+                    <option value="" >MTH 112</option>
+                    <option value="" >PHY 111</option>
+                    <option value="" >PHY 117</option>
+                    </select>
+                </td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td></td>
+                <td></td>
+              </tr>
+                
+            </table>
+            <button onclick="addCourseRow()">Add Course</button>
+
+          </div>
+        
+          <div class="footer" style="display: none;">
+            <p>CGPA: <span id="cgpa"></span></p>
+            <p>Class of degree: <span id="class"></span></p>
+          </div>
+        
+          <button onclick="calculateCGPA()">Calculate CGPA</button>
+          <button onclick="printResult()">Print</button>
+        
+          <script src="grade.js"></script>
+    </div>
+    
+    
+</body>
+</html>

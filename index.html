@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Student Planner</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="body">
+        <div id="body-1">
+            <h1>
+                Welcome to 
+                Planner-Z 
+                
+                <p><i><b>stay organized and manage your academic life effectively!</b></i>
+                    <a href="dashboard.html" class="btn">Get Started</a></p> 
+            </h1>      
+        </div>
+        
+        <div id="body-2">
+            <div class="welcome-container">
+                <h2> Log-in to Planner-Z </h2>
+                
+                <form>
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <button onclick="login()"><a href="home.html">log in</a></button>
+
+                    <div class="alternative-login">
+                        <p>Or log in with:</p>
+                        <button type="button" onclick="loginWithGoogle()">Google</button>
+                        <button type="button" onclick="loginWithFacebook()">Facebook</button>
+                        <button type="button" onclick="loginWithTwitter()">Apple</button>
+                    </div>
+                </form>
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    
+        </div>
+        </div>
+        
+
+    </div>
+    
+</body>
+</html>
+

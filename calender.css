@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    box-shadow:  0 2px 15px cornflowerblue;
+}
+
+
+
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color:cornflowerblue;
+}
+
+/* Style for the menu toggle (for small screens) */
+.menu-toggle {
+    display: none; /* Hide by default */
+    color: cornflowerblue;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Style the calendar container */
+#calendar {
+    width: 100% ;
+    margin-top: 20px;
+    color: cornflowerblue;
+    background-color:white ;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow:  0px 5px 15px cornflowerblue;
+    height: 700px;
+    
+    
+}
+
+/* Style the calendar header */
+#calendar h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style the table containing the calendar */
+#calendar table {
+    /* width: 100%; */
+    border-collapse: collapse;
+}
+
+/* Style table headers */
+#calendar th {
+    background-color: white;
+    color: cornflowerblue;
+    font-weight: bold;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+/* Style table cells */
+#calendar td {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid cornflowerblue;
+}
+
+
+.fc-title {
+    font-weight: bold;
+    /* color: #0078d4; */
+}
+
+/* Style the close button in the event modal */
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Style the event modal content */
+.modal-content {
+    background-color:white;
+    color: cornflowerblue;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow:  0 2px 15px cornflowerblue;
+}
+/* Style the event form labels */
+.modal-content label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style the event form inputs */
+.modal-content input[type="text"],
+.modal-content input[type="date"],
+.modal-content input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid cornflowerblue;
+    border-radius: 5px;
+    color: cornflowerblue;
+}
+
+/* Style the event form submit button */
+.modal-content button[type="submit"] {
+    background-color:cornflowerblue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Style the event form submit button on hover */
+.modal-content button[type="submit"]:hover {
+    background-color: white;
+    color: cornflowerblue;
+}

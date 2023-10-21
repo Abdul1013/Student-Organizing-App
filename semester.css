@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: cornflowerblue;
+}
+nav {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  box-shadow:  0 2px 15px cornflowerblue;
+}
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+nav a{
+    color: cornflowerblue;
+    text-decoration: none;
+}
+h1{
+    text-align: center;
+}
+.semester-details{
+    background-color: ;
+    height: 300px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow:  0 2px 15px cornflowerblue;
+}
+
+
+.semester-container {
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    padding: 5px;
+    width: 60%;
+    margin-right: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    padding: 5px;
+    /* background-color: #f2f2f2; */
+}
+#semester-details {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    display: none;
+}
+
+#semester-details h2 {
+    color: #333;
+    font-size: 18px;
+}
+
+#semester-details button {
+    padding: 5px 10px;
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+

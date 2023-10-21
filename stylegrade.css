@@ -1,0 +1,181 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Add styles for the navbar */
+.navbar {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  box-shadow:  0 2px 15px cornflowerblue;
+}
+
+.navbar ul {
+  list-style-type: none;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: cornflowerblue;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+#body {
+  margin: 20px auto;
+  width: 70%;     
+  padding: 50px;
+  font-family: 'Arial', sans-serif; 
+  color: cornflowerblue; 
+  box-shadow:  0 2px 15px cornflowerblue;
+  border-radius: 5px;  
+}
+
+.center{
+    margin-left: auto;
+    margin-left: auto;
+    width: 100px;
+    height: auto;
+    max-width: 100px;
+    text-align: center;
+}
+h1{
+    color: cornflowerblue;
+    text-align: center;
+    font-size: 3em;
+}
+#studentInfo h3 {
+    margin-top: 0;
+}
+.upload-container {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .preview-container {
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+  .preview-container h3 {
+    margin-top: 0;
+  }
+
+  #preview {
+    max-width: 300px;
+    max-height: 200px;
+  }
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    color: cornflowerblue;
+}
+  
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid black;
+}
+  
+.footer {
+    margin-top: 20px;
+}
+  
+.footer p {
+    margin: 5px;
+}
+  
+.footer span {
+    font-weight: bold;
+}
+
+#detials{
+  display: flex;
+}
+#studentInfo{
+
+}
+
+#img{
+  display: inline-block;
+  margin-left: 80%;
+  margin-top: -150px;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 100px;
+}
+
+
+
+.container {
+  /* Your existing styles for the container */
+  
+}
+
+
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 900px;
+  margin-top: 10px;
+  box-shadow:  0 2px 15px cornflowerblue;
+}
+
+/* input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+} */
+
+#btn {
+  width: 20%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#btn:hover {
+  background-color: #0056b3;
+}
+
+#courseList {
+  list-style: none;
+  padding: 0;
+}
+
+.container li {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
