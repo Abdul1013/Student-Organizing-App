@@ -1,12 +1,12 @@
 // Prompt user for name
-// var studentName = prompt("Please enter your name:");
-// var studentNameElement = document.getElementById("studentName");
-// studentNameElement.textContent = studentName;
+var studentName = prompt("Please enter your name:");
+var studentNameElement = document.getElementById("studentName");
+studentNameElement.textContent = studentName;
 
 // Prompt user for department
-// [var department = prompt("Please enter your department:");
-// var departmentElement = document.getElementById("department");
-// departmentElement.textContent = department;]
+var department = prompt("Please enter your department:");
+var departmentElement = document.getElementById("department");
+departmentElement.textContent = department;]
 
 // User to upload img
 function handleFileSelect(event) {
@@ -100,18 +100,7 @@ function addCourseRow() {
   var table = document.getElementById("transcriptTable");
   var newRow = table.insertRow(-1);
 
-  newRow.innerHTML = `<td contenteditable="true"> <select name="Course" size="1" id="">
-                            <option value="" selected>MTH 111</option>
-                            <option value="" >SEN 101</option>
-                            <option value="" >CSC 112</option>
-                            <option value="" >GST 105</option>
-                            <option value="" >CSC 111</option>
-                            <option value="" >CSC 113</option>
-                            <option value="" >STT 112</option>
-                            <option value="" >MTH 112</option>
-                            <option value="" >PHY 111</option>
-                            <option value="" >PHY 117</option>
-                            </select>
+  newRow.innerHTML = `<td contenteditable="true">  
                         </td>
                         <td contenteditable="true"></td>
                         <td contenteditable="true"></td>
