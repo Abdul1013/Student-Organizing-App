@@ -21,30 +21,28 @@
     </ul>
   </nav>
 
-    <div id="body">
-        <!-- <h1>Student Grade Tracker</h1> -->
-
+    <div class="body">
+        <h1>Grade Tracker</h1>
         <div id="detial">
             <div id="studentInfo">
-                <h2>Grade Tracker</h2>
-                <h3>Student Name: <span id="studentName"></span></h3>
-                <h3>Department: <span id="department"></span></h3>
-                <h3>Semester:  <span id="Semester"></span></h3>
+                
+                <h3>Student Name: <input type="text" placeholder="Inpute your Name"></h3>
+                <h3>Department: <input type="text" placeholder=" Input Your Department"></h3>
+                <h3>Session:  <input type="text" placeholder="Enter The Session"></h3>
+                <h3>Semester:  <input type="text" placeholder="Enter The Semester"></h3>
             </div>
             <div id="img">
               <div class="upload-container">
-                <label for="upload">Choose an image:</label>
-                <input type="file" id="upload" accept="image/*" onchange="handleFileSelect(event)">
+                  <label for="uploadPicture">Choose an image:</label>
+                  <input type="file" id="uploadPicture" accept="image/*">
               </div>
-            
               <div class="preview-container">
-                <img id="preview" alt="Preview Image" height="100px" width="100px">
+                  <img src="dummy profile.jpeg" id="profilePicture" class="profile-picture" alt="Preview Image" height="150" width="150">
               </div>
-            </div>
-            
+          </div>
         </div>
         
-          <div id="transcriptContainer" style="display: none;">
+        <div id="transcriptContainer" >
             <table id="transcriptTable">
               <tr>
                 <th>Course code</th>

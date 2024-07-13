@@ -1,25 +1,42 @@
 // Prompt user for name
-var studentName = prompt("Please enter your name:");
-var studentNameElement = document.getElementById("studentName");
-studentNameElement.textContent = studentName;
+// var studentName = prompt("Please enter your name:");
+// var studentName = document.getElementById("studentName");
+// studentName.textContent = studentName;
+// studentName.setAttribute("contenteditable", "true");
 
 // Prompt user for department
-var department = prompt("Please enter your department:");
-var departmentElement = document.getElementById("department");
-departmentElement.textContent = department;]
+// var department = prompt("Please enter your department:");
+// var departmentElement = document.getElementById("department");
+// departmentElement.textContent = department;
+// departmentElement.setAttribute("contenteditable", "true");
+
+//prompt user semester
+// var semesterElement = document.getElementById("Semester")
+// semesterElement.textContent = semesterElement;
+// semesterElement.setAttribute("contenteditable", "true");
 
 // User to upload img
-function handleFileSelect(event) {
+// function handleFileSelect(event) {
+//   var file = event.target.files[0];
+//   var reader = new FileReader();
+
+//   reader.onload = function(event) {
+//     var image = document.getElementById('preview');
+//     image.src = event.target.result;
+//   };
+
+//   reader.readAsDataURL(file);
+// }
+uploadPictureInput.addEventListener("change", function(event) {
   var file = event.target.files[0];
-  var reader = new FileReader();
-
-  reader.onload = function(event) {
-    var image = document.getElementById('preview');
-    image.src = event.target.result;
-  };
-
-  reader.readAsDataURL(file);
-}
+  if (file) {
+      var reader = new FileReader();
+      reader.onload = function(e) {
+          profilePictureElement.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+  }
+});
 
 // Calculate Grade Points (GP) based on score
 function calculateGP(score) {
