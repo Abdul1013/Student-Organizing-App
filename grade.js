@@ -27,16 +27,35 @@
 
 //   reader.readAsDataURL(file);
 // }
-uploadPictureInput.addEventListener("change", function(event) {
-  var file = event.target.files[0];
-  if (file) {
-      var reader = new FileReader();
-      reader.onload = function(e) {
-          profilePictureElement.src = e.target.result;
-      };
-      reader.readAsDataURL(file);
+// uploadPictureInput.addEventListener("change", function(event) {
+//   var file = event.target.files[0];
+//   if (file) {
+//       var reader = new FileReader();
+//       reader.onload = function(e) {
+//           profilePictureElement.src = e.target.result;
+//       };
+//       reader.readAsDataURL(file);
+//   }
+// });
+
+function uploadProfilePicture(img) {
+  var pic;
+  if (img === 1) {
+      pic = document.getElementById("uploadPicture");
+      pic.addEventListener("change", function(event) {
+          var file = event.target.files[0];
+          if (file) {
+              var reader = new FileReader();
+              reader.onload = function(e) {
+                  document.getElementById("profilePicture").src = e.target.result;
+              };
+              reader.readAsDataURL(file);
+          }
+      });
+  } else {
+      pic = document.getElementById("profilePicture");
   }
-});
+}
 
 // Calculate Grade Points (GP) based on score
 function calculateGP(score) {

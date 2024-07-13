@@ -44,22 +44,22 @@ body {
   border-radius: 5px;  
 }
 
-.center{
+/* .center{
     margin-left: auto;
     margin-left: auto;
     width: 100px;
     height: auto;
     max-width: 100px;
-    text-align: center;
-}
+    text-align: center; */
+/* } */
 h1{
     color: cornflowerblue;
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
 }
-#studentInfo h3 {
+/* #studentInfo h3 {
     margin-top: 0;
-}
+} */
 .upload-container {
   margin-bottom: 10px;
 }
@@ -87,31 +87,19 @@ table {
 }
 
 th {
-    color: cornflowerblue;
+  text-align: center;
+  padding: 5px;
+  color: cornflowerblue;
+  border: 2px #ddd solid;
 }
   
-th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    border-right: 1px solid black;
+td {
+  padding: 5px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  /* border-right: 1px solid black; */
 }
   
-.footer {
-    margin-top: 20px;
-}
-  
-.footer p {
-    margin: 5px;
-}
-  
-.footer span {
-    font-weight: bold;
-}
-
-#detials{
-  display: flex;
-}
 
 
 #img{
@@ -124,30 +112,17 @@ th, td {
 }
 
 
-
-
-
-/* .container {
-  max-width: 90%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  height: 900px;
-  margin-top: 10px;
-  box-shadow:  0 2px 15px cornflowerblue;
-} */
-
 input[type="text"],
 select {
   max-width: 100%;
-  padding: 5px 10px;
+  padding: 5px;
+  border: none;
+  text-decoration: underline;
 }
 
 button {
-  width: 20%;
-  padding: 10px;
+  max-width: 100%;
+  padding: 5px;
   background-color: #fff;
   color: cornflowerblue;
   border: 1px cornflowerblue solid;
@@ -161,17 +136,13 @@ button:hover {
   color: #fff;
 }
 
-#courseList {
-  list-style: none;
-  padding: 0;
-}
-
-.container li {
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid #ccc;
-  padding: 5px 10px;
-  margin: 5px 0;
-  border-radius: 5px;
+footer {
+  background-color: cornflowerblue;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
 }
 
