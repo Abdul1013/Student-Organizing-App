@@ -182,3 +182,98 @@ function deleteSemester() {
     }
 }
 
+//code for course page
+document.addEventListener('DOMContentLoaded', function() {
+    const courseForm = document.getElementById('courseForm');
+    const courseNameInput = document.getElementById('courseName');
+    const semesterInput = document.getElementById('semester');
+    const courseList = document.getElementById('courseList');
+  
+    const timetableForm = document.getElementById('timetableForm');
+    const classTitleInput = document.getElementById('classTitle');
+    const classTimeInput = document.getElementById('classTime');
+    const timetableList = document.getElementById('timetableList');
+  
+    // Function to create a new course item
+    function createCourseItem(courseName, semester) {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `${courseName} - ${semester}`;
+  
+        // Add buttons for editing and deleting courses
+        const editButton = document.createElement('button');
+        editButton.textContent = 'Edit';
+        editButton.addEventListener('click', function() {
+            // Allow users to edit course name and semester
+            const updatedCourseName = prompt('Edit course name:', courseName);
+            const updatedSemester = prompt('Edit semester:', semester);
+  
+            if (updatedCourseName && updatedSemester) {
+                listItem.innerHTML = `${updatedCourseName} - ${updatedSemester}`;
+            }
+        });
+  
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.addEventListener('click', function() {
+            // Remove the course item from the list
+            courseList.removeChild(listItem);
+        });
+  
+        listItem.appendChild(editButton);
+        listItem.appendChild(deleteButton);
+  
+        return listItem;
+    }
+  
+    // Function to create a new class item
+    function createClassItem(classTitle, classTime) {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `${classTitle} - ${classTime}`;
+  
+        // Add a button to delete the class
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.addEventListener('click', function() {
+            // Remove the class item from the list
+            timetableList.removeChild(listItem);
+        });
+  
+        listItem.appendChild(deleteButton);
+  
+        return listItem;
+    }
+  
+    courseForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+  
+        const courseName = courseNameInput.value;
+        const semester = semesterInput.value;
+  
+        if (courseName && semester) {
+            // Create a new course item and add it to the list
+            const listItem = createCourseItem(courseName, semester);
+            courseList.appendChild(listItem);
+  
+            // Clear the form inputs
+            courseNameInput.value = '';
+            semesterInput.value = '';
+        }
+    });
+  
+    timetableForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+  
+        const classTitle = classTitleInput.value;
+        const classTime = classTimeInput.value;
+  
+        if (classTitle && classTime) {
+            // Create a new class item and add it to the list
+            const listItem = createClassItem(classTitle, classTime);
+            timetableList.appendChild(listItem);
+  
+            // Clear the form inputs
+            classTitleInput.value = '';
+            classTimeInput.value = '';
+        }
+    });
+  });
