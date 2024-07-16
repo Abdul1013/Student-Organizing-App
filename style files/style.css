@@ -19,31 +19,31 @@ body {
   align-items: center;
 }
 #body-2 {
-    max-width: 350px;
-    max-height: 100vh;
-    margin: 0 auto;
-    text-align: center;
-    padding: 80px;
-    padding-top: 0;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px cornflowerblue;
+  max-width: 350px;
+  max-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  padding: 80px;
+  padding-top: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px cornflowerblue;
 }
   
-  h1 {
+h1 {
    
-    text-align: center;
-    margin: 0 auto;
-    margin-top: -50px;
-    padding: 50px;
-    color:cornflowerblue;
-  }
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -50px;
+  padding: 50px;
+  color:cornflowerblue;
+}
   
- div h2 {
-    text-align:center;
-    color: cornflowerblue;
-    margin-bottom: 50px;
-  }
+div h2 {
+  text-align:center;
+  color: cornflowerblue;
+  margin-bottom: 50px;
+}
 
   form input {
     width: 100%;
@@ -51,19 +51,19 @@ body {
     margin-bottom: 20px;
     border-radius: 3px;
     border: 1px solid #ccc;
-    border-color: cornflowerblue;
-  }
+  border-color: cornflowerblue;
+}
   
 button {
-    width: 50%;
-    padding: 10px;
-    margin: 5px;
-    background-color: cornflowerblue;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    text-align: center;
+  width: 50%;
+  padding: 10px;
+  margin: 5px;
+  background-color: cornflowerblue;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
    
 }
 button a{
@@ -87,9 +87,9 @@ p {
   font-size: 14px;
 }
   
- #body {
+#body {
   font-family: Arial, sans-serif;
-  /* background-color: cornflowerblue; */
+
 }
 
 .containers {
