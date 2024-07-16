@@ -1,0 +1,15 @@
+Introduction
+This Student Planner and Organization App is a web-based application designed to help students manage their schedules, keep track of assignments, and monitor their grades. The app is built using HTML, CSS, and JavaScript and includes an imported calendar for easy schedule management.
+
+Features
+Calendar Integration: View and manage your schedule with an interactive calendar.
+Task Management: Add, edit, and delete tasks and assignments.
+Grade Tracking: Keep track of your grades and calculate GPA.
+Responsive Design: The app is fully responsive and works on both desktop and mobile devices.
+Technologies Used
+HTML: Structure of the app
+CSS: Styling and layout
+JavaScript: Interactivity and functionality
+External Libraries:
+FullCalendar.js for calendar integration
+Installation

@@ -27,7 +27,6 @@ h1{
     text-align: center;
 }
 .semester-details{
-    /* background-color */
     height: 300px;
     margin: 10px;
     padding: 10px;
@@ -82,7 +81,12 @@ li {
     border: none;
     cursor: pointer;
 }
-
-
-
-
+footer {
+     background-color: cornflowerblue;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+  }
