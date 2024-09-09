@@ -5,57 +5,59 @@ body {
   display: flex;
   align-items: center;
   height: 100vh;
+  margin: 0;
 }
-  
+
 #body {
   display: flex;
+  flex-direction: column;
   height: 100vh;
 }
 
-#body-1, #body-2{
+#body-1,
+#body-2 {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
+
 #body-2 {
   max-width: 350px;
-  max-height: 100vh;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
-  padding: 80px;
-  padding-top: 0;
+  padding: 40px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px cornflowerblue;
 }
-  
+
 h1 {
-   
   text-align: center;
   margin: 0 auto;
-  margin-top: -50px;
-  padding: 50px;
-  color:cornflowerblue;
-}
-  
-div h2 {
-  text-align:center;
+  padding: 20px;
   color: cornflowerblue;
-  margin-bottom: 50px;
 }
 
-  form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
+div h2 {
+  text-align: center;
+  color: cornflowerblue;
+  margin-bottom: 20px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
   border-color: cornflowerblue;
 }
-  
+
 button {
-  width: 50%;
+  width: 100%;
   padding: 10px;
   margin: 5px;
   background-color: cornflowerblue;
@@ -63,33 +65,21 @@ button {
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  text-align: center;
-   
 }
-button a{
+
+button:hover {
+  background-color: white;
+  color: cornflowerblue;
+}
+
+button a {
   color: white;
   text-decoration: none;
 }
 
-button a:hover{
-  background-color: white;
-  color: cornflowerblue;
-}
-  
-button:hover {
-  background-color:white;
-  color: cornflowerblue;
-}
-  
 p {
   margin-top: 20px;
-  margin-bottom: 50px;
   font-size: 14px;
-}
-  
-#body {
-  font-family: Arial, sans-serif;
-
 }
 
 .containers {
@@ -126,7 +116,7 @@ input[type="password"] {
 #message {
   color: red;
   font-weight: bold;
-} 
+}
 
 footer {
   background-color: cornflowerblue;
@@ -136,4 +126,55 @@ footer {
   font-size: 14px;
   position: relative;
   bottom: 0;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+  #body {
+    flex-direction: column;
+  }
+
+  #body-2 {
+    max-width: 85%;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  form input {
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px;
+  }
+
+  .alternative-login button {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  form input {
+    padding: 6px;
+    width: 100%;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  button {
+    padding: 6px;
+    width: 200px;
+  }
 }
