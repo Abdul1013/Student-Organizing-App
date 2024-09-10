@@ -1,9 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
-  
+
 nav {
   background-color: white;
   padding: 20px;
@@ -12,18 +12,18 @@ nav {
   width: 100%;
   z-index: 1;
   margin-right: -5px;
-  box-shadow:  0 2px 15px cornflowerblue;
+  box-shadow: 0 2px 15px cornflowerblue;
 }
-  
+
 nav ul {
   list-style-type: none;
 }
-  
+
 nav ul li {
   display: inline-block;
   margin-right: 20px;
 }
-  
+
 nav ul li a {
   color: cornflowerblue;
   text-decoration: none;
@@ -32,9 +32,8 @@ nav ul li a {
   margin: 20px;
   border: 1px solid cornflowerblue;
   border-radius: 5px;
-  width: 90%; 
-  height: 300px; 
-  
+  width: 90%;
+  height: 300px;
 }
 
 #calendar {
@@ -50,8 +49,10 @@ main {
 #content {
   width: 100%;
   display: flex;
-}  
-#content-left, #content-right, #content-middle{
+}
+#content-left,
+#content-right,
+#content-middle {
   padding: 20px;
   margin: 10px;
   flex: 1;
@@ -65,52 +66,52 @@ h2 {
   color: cornflowerblue;
   margin-bottom: 10px;
 }
-ol{
+ol {
   list-style-type: armenian;
 }
 ul {
   list-style: none;
   padding: 0;
 }
-  
+
 #content li {
-    display: flex;
-    /* align-items: center;  */
-    justify-content: space-between; 
-    padding: 5px;
-    border-bottom: 1px solid #ccc;
+  display: flex;
+  /* align-items: center;  */
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
 }
-  
+
 li button {
-    margin-left: 2px; 
+  margin-left: 2px;
 }
-  
-  li.completed {
-    color: #888;
-    text-decoration: line-through;
-  }
-  .tasks input, .tasks button {
-    margin-top: 5px;
-  }
-  .task-buttons button {
-    margin-left: 5px;
-  }
-  
-  .completed {
-    text-decoration: line-through;
-    color: royalblue;
-  }
-  
+
+li.completed {
+  color: #888;
+  text-decoration: line-through;
+}
+.tasks input,
+.tasks button {
+  margin-top: 5px;
+}
+.task-buttons button {
+  margin-left: 5px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: royalblue;
+}
+
 input {
-    width: auto;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 3px;
-    border: 1px solid cornflowerblue;
-    border-color: cornflowerblue;
+  width: auto;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  border: 1px solid cornflowerblue;
+  border-color: cornflowerblue;
 }
-  
-  
+
 button {
   background-color: cornflowerblue;
   color: black;
@@ -119,7 +120,7 @@ button {
   border-radius: 3px;
   cursor: pointer;
 }
-  
+
 button:hover {
   background-color: #0056b3;
 }
@@ -134,20 +135,14 @@ footer {
   bottom: 0;
 }
 @media screen and (max-width: 468px) {
+  .body {
+    margin-top: 100px;
+  }
   #content {
-      flex-direction: column; /* Stack the content vertically */
+    flex-direction: column;
   }
 
   #content-right {
-      display: none; /* Hide the right side on smaller screens */
-  }
-
-  /* nav ul li {
-      display: block; 
-      margin-bottom: 10px;
-  } */
-
-  .calendar-container {
-      width: 100%; /* Adjust calendar width for smaller screens */
+    display: none;
   }
 }
