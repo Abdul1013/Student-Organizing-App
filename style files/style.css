@@ -124,21 +124,13 @@ footer {
   padding: 10px;
   text-align: center;
   font-size: 14px;
-  position: relative;
+  position: fixed;
   bottom: 0;
 }
 
 /* Media Queries for responsiveness */
 @media screen and (max-width: 768px) {
-  #body {
-    flex-direction: column;
-  }
-
-  #body-2 {
-    max-width: 85%;
-    padding: 20px;
-    margin-bottom: 30px;
-  }
+  
 
   h1 {
     font-size: 24px;
@@ -158,23 +150,42 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+  #body {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #body-2 {
+    max-width: 85%;
+    padding: 10px;
+    margin-bottom: 30px;
+  
+    
+  }
   h1 {
     font-size: 20px;
   }
-
+  #body-1{
+    height: 50px;
+  }
   form input {
     padding: 6px;
     width: 100%;
   }
   input[type="text"],
-  input[type="password"] {
+  input[type="password"], input[type="email"], input[type="date"], select {
     width: 80%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 15px 0;
   }
 
   button {
     padding: 6px;
     width: 200px;
+    margin: 10px 0;
+
+  }
+  .containers {
+    margin-top: 10px;
   }
 }
