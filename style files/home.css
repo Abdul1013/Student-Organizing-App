@@ -133,3 +133,21 @@ footer {
   position: relative;
   bottom: 0;
 }
+@media screen and (max-width: 468px) {
+  #content {
+      flex-direction: column; /* Stack the content vertically */
+  }
+
+  #content-right {
+      display: none; /* Hide the right side on smaller screens */
+  }
+
+  /* nav ul li {
+      display: block; 
+      margin-bottom: 10px;
+  } */
+
+  .calendar-container {
+      width: 100%; /* Adjust calendar width for smaller screens */
+  }
+}

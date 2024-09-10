@@ -130,8 +130,6 @@ footer {
 
 /* Media Queries for responsiveness */
 @media screen and (max-width: 768px) {
-  
-
   h1 {
     font-size: 24px;
   }
@@ -158,14 +156,14 @@ footer {
   #body-2 {
     max-width: 85%;
     padding: 10px;
-    margin-bottom: 30px;
-  
-    
+    /* margin-bottom: 30px; */
   }
   h1 {
+    margin: 20px 0;
+    padding: 20px 0;
     font-size: 20px;
   }
-  #body-1{
+  #body-1 {
     height: 50px;
   }
   form input {
@@ -173,7 +171,10 @@ footer {
     width: 100%;
   }
   input[type="text"],
-  input[type="password"], input[type="email"], input[type="date"], select {
+  input[type="password"],
+  input[type="email"],
+  input[type="date"],
+  select {
     width: 80%;
     padding: 10px;
     margin: 15px 0;
@@ -183,9 +184,18 @@ footer {
     padding: 6px;
     width: 200px;
     margin: 10px 0;
-
+    bottom: 0;
+    margin-bottom: auto;
   }
   .containers {
     margin-top: 10px;
+  }
+  .welcome-container {
+    height: 600px;
+    /* padding: 20px 0; */
+  }
+  .welcome-container input,
+  button {
+    margin: 20px 0;
   }
 }
