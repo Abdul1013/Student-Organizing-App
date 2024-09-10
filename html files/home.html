@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style files/home.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style files/home.css" />
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
     <title>Home Page</title>
-</head>
-<body>
-  <nav id="nav">
+  </head>
+  <body>
+    <!-- <nav id="nav">
     <ul>
       <li><a href="DOCTYP.html" class="active">Home</a></li>
       <li><a href="calendar.html" onclick="openCalendar()">Calendar</a></li>
@@ -17,19 +17,35 @@
       <li><a href="grade.html" onclick="gradetracker()">Grade Tracker</a></li>
       <li><a href="#" onclick="openSettings()">Profile</a></li>
     </ul>
-  </nav>
+  </nav> -->
 
-  <div>
-      <section  id="home-page">
+    <div id="navbar-placeholder"></div>
+
+    <script>
+      // JavaScript to load the navbar
+      fetch("/html files/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+          const hamburger = document.querySelector(".hamburger");
+          hamburger.addEventListener("click", toggleMenu);
+          function toggleMenu() {
+            const navLinks = document.getElementById("nav-links");
+            const hamburger = document.querySelector(".hamburger");
+            navLinks.classList.toggle("active");
+            hamburger.classList.toggle("active");
+          }
+        });
+    </script>
+
+    <div>
+      <section id="home-page">
         <main>
-
           <div id="content">
-
             <div id="content-right">
-
               <div class="calendar-container">
                 <div id="calendar"></div>
-            </div>
+              </div>
 
               <h2>Dialy Routine</h2>
               <ol>
@@ -43,9 +59,7 @@
                 <li>Study/Work</li>
                 <li>liesure/ Bed time routine</li>
               </ol>
-
-             
-            </div> 
+            </div>
 
             <div id="content-middle">
               <h2>Today's class</h2>
@@ -67,19 +81,21 @@
 
               <section>
                 <h2>Upcoming Events</h2>
-                <ul id="events-list">
-                </ul>
+                <ul id="events-list"></ul>
                 <button onclick="addEvent()">Add Event</button>
               </section>
-  
+
               <section>
                 <h2>Notes</h2>
-                <textarea id="notes-input" rows="5" placeholder="Write down your notes here."></textarea>
+                <textarea
+                  id="notes-input"
+                  rows="5"
+                  placeholder="Write down your notes here."
+                ></textarea>
                 <div>
-                  <button onclick="saveNotes()" >Save Notes</button>
+                  <button onclick="saveNotes()">Save Notes</button>
                 </div>
               </section>
-
             </div>
 
             <div id="content-left">
@@ -87,29 +103,36 @@
                 <div class="schedule">
                   <h2>TO-DO LIST</h2>
                   <ul id="scheduleList"></ul>
-                  <input type="text" id="newSchedule" placeholder="Enter new task">
+                  <input
+                    type="text"
+                    id="newSchedule"
+                    placeholder="Enter new task"
+                  />
                   <button id="addScheduleBtn">Add To-Do</button>
                 </div>
 
                 <div class="tasks">
                   <h2>Assignments</h2>
                   <ul id="taskList"></ul>
-                  <input type="text" id="newTask" placeholder="Enter a new assignments">
-                 <h6> <button id="addTaskBtn">Add Assignment</button></h6>
+                  <input
+                    type="text"
+                    id="newTask"
+                    placeholder="Enter a new assignments"
+                  />
+                  <h6><button id="addTaskBtn">Add Assignment</button></h6>
                 </div>
               </div>
-
-              
             </div>
-            
           </div>
         </main>
-      </section> 
-          <footer>
-            <p> <a href="#">Back to top</a> &copy; 2023 Student Planner. All rights reserved. @abdulthedev&trade;</p>
-
-          </footer>
+      </section>
+      <footer>
+        <p>
+          <a href="#">Back to top</a> &copy; 2023 Student Planner. All rights
+          reserved. @abdulthedev&trade;
+        </p>
+      </footer>
     </div>
     <script src="/scriptFiles/home.js"></script>
-</body>
+  </body>
 </html>

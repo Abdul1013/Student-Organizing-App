@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <title>Responsive Navbar</title>
+  </head>
+  <body>
+    <style>
+      /* General styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding: 20px;
+        position: fixed;
+        width: 100%;
+        box-shadow: 0 2px 15px cornflowerblue;
+      }
+
+      .logo h1 {
+        margin: 0;
+        font-size: 24px;
+        color: cornflowerblue;
+        text-align: center;
+        flex: 1;
+      }
+
+      #nav-links {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      #nav-links li {
+        margin: 0 15px;
+      }
+
+      #nav-links li a {
+        color: cornflowerblue;
+        text-decoration: none;
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: cornflowerblue;
+        margin: 5px 0;
+        transition: 0.4s;
+      }
+
+      @media screen and (max-width: 768px) {
+        nav {
+          justify-content: flex-start;
+        }
+
+        .logo {
+          order: 2;
+          flex: 1;
+        }
+
+        #nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          background-color: white;
+          width: 100%;
+          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        #nav-links li {
+          text-align: center;
+          margin: 10px 0;
+        }
+
+        .hamburger {
+          display: flex;
+          order: 1;
+        }
+
+        /* Show menu when toggled */
+        #nav-links.active {
+          display: flex;
+        }
+      }
+    </style>
+
+    <nav id="nav">
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="logo">
+        <h1>Student Planner</h1>
+      </div>
+      <ul id="nav-links">
+        <li><a href="DOCTYP.html" class="active">Home</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="#">Tasks</a></li>
+        <li><a href="course.html">Semester Manager</a></li>
+        <li><a href="grade.html">Grade Tracker</a></li>
+        <li><a href="#">Profile</a></li>
+      </ul>
+    </nav>
+
+    <!-- <script defer>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            const hamburger = document.querySelector('.hamburger');
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+        
+    </script> -->
+  </body>
+</html>
