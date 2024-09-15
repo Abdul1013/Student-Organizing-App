@@ -1,85 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Result Tracker">
-  <meta name="author" content="Abdulhaq">
-  <link rel="stylesheet" href="/style files/grade.css">
-  <title> Grade Tracker</title>
-</head>
-<body>
-  <nav class="navbar">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="semester.html">Courses</a></li>
-        <li><a href="#">Task</a></li>
-        <li><a href="#">Semester</a></li>
-        <li><a href="calendar.html">Calendar</a></li>
-        <li><a href="#">Profile</a></li>
-    </ul>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Result Tracker" />
+    <meta name="author" content="Abdulhaq" />
+    <link rel="stylesheet" href="/style files/grade.css" />
+    <title>Grade Tracker</title>
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+    <script>
+      // JavaScript to load the navbar
+      fetch("/html files/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+          const hamburger = document.querySelector(".hamburger");
+          hamburger.addEventListener("click", toggleMenu);
+          function toggleMenu() {
+            const navLinks = document.getElementById("nav-links");
+            const hamburger = document.querySelector(".hamburger");
+            navLinks.classList.toggle("active");
+            hamburger.classList.toggle("active");
+          }
+        });
+    </script>
 
     <div class="body">
-        <h1>Grade Tracker</h1>
-        <div id="detial">
-            <div id="studentInfo">
-                
-                <h3>Student Name: <input type="text" placeholder="Inpute your Name"></h3>
-                <h3>Department: <input type="text" placeholder=" Input Your Department"></h3>
-                <h3>Session:  <input type="text" placeholder="Enter The Session"></h3>
-                <h3>Semester:  <input type="text" placeholder="Enter The Semester"></h3>
+      <h1>Grade Tracker</h1>
+      <div id="detial">
+        <div class="studentInfo" id="studentInfo">
+          <h3>
+            Student Name: <input type="text" placeholder="Inpute your Name" />
+          </h3>
+          <h3>
+            Department:
+            <input type="text" placeholder=" Input Your Department" />
+          </h3>
+          <h3>
+            Session: <input type="text" placeholder="Enter The Session" />
+          </h3>
+          <h3>
+            Semester: <input type="text" placeholder="Enter The Semester" />
+          </h3>
+        </div>
+        <div>
+          <div id="img">
+            <div class="upload-container">
+              <label for="uploadPicture">Choose an image:</label>
+              <input
+                type="file"
+                onclick="uploadProfilePicture(1)"
+                id="uploadPicture"
+                accept="image/*"
+              />
             </div>
-            <div id="img">
-              <div class="upload-container">
-                  <label for="uploadPicture">Choose an image:</label>
-                  <input type="file" onclick="uploadProfilePicture(1)" id="uploadPicture" accept="image/*">
-              </div>
-              <div class="preview-container">
-                  <img src="dummy profile.jpeg" id="profilePicture" class="profile-picture" alt="Preview Image" height="150" width="150">
-              </div>
+            <div class="preview-container">
+              <img
+                src="dummy profile.jpeg"
+                id="profilePicture"
+                class="profile-picture"
+                alt="Preview Image"
+                height="150"
+                width="50"
+              />
+            </div>
           </div>
         </div>
-        
-        <div id="transcriptContainer" >
-            <table id="transcriptTable">
-              <tr>
-                <th>Course code</th>
-                <th>Title</th>
-                <th>Unit</th>
-                <th>Score</th>
-                <th>GP</th>
-                <th>WGP (Unit x GP)</th>
-              </tr>
-              <tr>
-                <td contenteditable="true">
-                </td>
-                <td contenteditable="true"></td>
-                <td contenteditable="true"></td>
-                <td contenteditable="true"></td>
-                <td></td>
-                <td></td>
-              </tr>
-            
-            </table>
-            <button onclick="addCourseRow()">Add Course</button>
+      </div>
 
-          </div>
-        
-          <div class="footer" style="display: none;">
-            <p>CGPA: <span id="cgpa"></span></p>
-            <p>Class of degree: <span id="class"></span></p>
-          </div>
-        
-          <button onclick="calculateCGPA()">Calculate CGPA</button>
-          <button onclick="printResult()">Print</button>
-        
-          <script src="/scriptFiles/grade.js"></script>
+      <div id="transcriptContainer">
+        <table id="transcriptTable">
+          <tr>
+            <th>Course code</th>
+            <th>Title</th>
+            <th>Unit</th>
+            <th>Score</th>
+            <th>GP</th>
+            <th>WGP (Unit x GP)</th>
+          </tr>
+          <tr>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <button class="button" onclick="addCourseRow()">Add Course</button>
+
+      <div class="footer" style="display: none">
+        <p>CGPA: <span id="cgpa"></span></p>
+        <p>Class of degree: <span id="class"></span></p>
+      </div>
+
+      <button class="button" onclick="calculateCGPA()">Calculate CGPA</button>
+      <button class="button" onclick="printResult()">Print</button>
+
+      <script src="/scriptFiles/grade.js"></script>
     </div>
     <footer>
-      <p> <a href="#">Back to top</a> &copy; 2023 Student Planner. All rights reserved. @abdulthedev&trade;</p>
-
+      <p>
+        <a href="#">Back to top</a> &copy; 2023 Student Planner. All rights
+        reserved. @abdulthedev&trade;
+      </p>
     </footer>
   </body>
 </html>

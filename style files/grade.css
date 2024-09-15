@@ -2,52 +2,30 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x:hidden ;
-}
-
-.navbar {
-  background-color: white;
-  padding: 20px;
-  text-align: center;
-  position: relative;
-  width: 100%;
-  z-index: 1;
-  box-shadow:  0 2px 15px cornflowerblue;
-}
-
-.navbar ul {
-  list-style-type: none;
-}
-
-.navbar ul li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.navbar a {
-  color: cornflowerblue;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
+  overflow-x: hidden;
 }
 
 .body {
-  margin: 20px auto;
-  width: 90%;     
+  /* margin-top: 100px; */
+  width: 90%;
+  margin: 100px auto auto;
   padding: 10px;
-  font-family: 'Arial', sans-serif; 
-  color: cornflowerblue; 
-  box-shadow:  0 2px 15px cornflowerblue;
-  border-radius: 5px;  
+  font-family: "Arial", sans-serif;
+  color: cornflowerblue;
+  box-shadow: 0 2px 15px cornflowerblue;
+  border-radius: 5px;
 }
-
-
-h1{
-    color: cornflowerblue;
-    text-align: center;
-    font-size: 2em;
+.studentInfo{
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  color: cornflowerblue;
+  text-align: center;
+  font-size: 2em;
+}
+h3{
+  margin: 0;
 }
 
 .upload-container {
@@ -68,8 +46,8 @@ h1{
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 th {
@@ -78,16 +56,14 @@ th {
   color: cornflowerblue;
   border: 2px #ddd solid;
 }
-  
+
 td {
   padding: 5px;
   text-align: left;
   border-bottom: 2px solid #ddd;
 }
-  
 
-
-#img{
+#img {
   display: inline-block;
   margin-left: 80%;
   margin-top: -250px;
@@ -95,13 +71,13 @@ td {
   width: 100px;
 }
 
-
 input[type="text"],
 select {
   max-width: 100%;
   padding: 5px;
   border: none;
-  text-decoration: underline;
+  text-decoration: underline cornflowerblue;
+  color: cornflowerblue;
 }
 
 button {
@@ -126,7 +102,61 @@ footer {
   padding: 10px;
   text-align: center;
   font-size: 14px;
-  position: relative;
+  position: fixed;
   bottom: 0;
+  /* margin-top: auto; */
 }
+@media screen and (max-width: 468px) {
+  .body {
+    margin-top: 100px;
+    width: 100%;
+    padding: 5px;
+    display:flex ;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  #img {
+    /* display: flex; */
+    width: 50px;
+    height: 100px;
+    /* margin-top: 10px; */
+  }
+  .studentInfo{
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .preview-container {
+    width: 50%;
+
+
+  }
+
+  input[type="text"],
+  select {
+    width: 50%;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+
+
+  th, td {
+    padding: 3px;
+  }
+
+  .button {
+    width: 50%;
+    padding: 10px;
+    margin: 4px auto auto;
+  }
+}
+
 
