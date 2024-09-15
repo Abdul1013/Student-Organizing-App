@@ -10,8 +10,10 @@ body {
 
 #body {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100vh;
+  margin: auto;
+  overflow: hidden;
 }
 
 #body-1,
@@ -26,11 +28,12 @@ body {
 #body-2 {
   max-width: 350px;
   width: 100%;
-  margin: 0 auto;
+  margin:  auto;
   text-align: center;
   padding: 40px;
   background-color: #fff;
   border-radius: 5px;
+  height: 500px;
   box-shadow: 0 2px 5px cornflowerblue;
 }
 
@@ -150,21 +153,20 @@ footer {
 @media screen and (max-width: 480px) {
   #body {
     flex-direction: column;
-    height: auto;
+    height: 100vh;
+    overflow: hidden;
   }
 
   #body-2 {
-    max-width: 85%;
-    padding: 10px;
-    /* margin-bottom: 30px; */
+    max-width: 80%;
+    /* padding: 5px; */
+    height: 100vh;
+    margin: auto;
+    top: 0;
   }
-  h1 {
-    margin: 20px 0;
-    padding: 20px 0;
-    font-size: 20px;
-  }
+
   #body-1 {
-    height: 50px;
+    display: none;
   }
   form input {
     padding: 6px;
@@ -190,12 +192,6 @@ footer {
   .containers {
     margin-top: 10px;
   }
-  .welcome-container {
-    height: 600px;
-    /* padding: 20px 0; */
-  }
-  .welcome-container input,
-  button {
-    margin: 20px 0;
-  }
+  
+
 }
