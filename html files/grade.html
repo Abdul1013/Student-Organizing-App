@@ -103,6 +103,16 @@
 
       <script src="/scriptFiles/grade.js"></script>
     </div>
+
+    <div id="footer-placeholder">
+      <script>
+        fetch("/html files/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+          });
+      </script>
+    </div>
     <footer>
       <p>
         <a href="#">Back to top</a> &copy; 2023 Student Planner. All rights
